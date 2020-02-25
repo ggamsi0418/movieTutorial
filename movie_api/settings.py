@@ -25,7 +25,8 @@ SECRET_KEY = 'k42na_3sa61^$-u#r55cni2m4dpid45!#$m!0f#=as5tdx8@5='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# develop용으로 모두를 허용
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # movies 앱 설치 후 추가
+    'rest_framework',
+    'movies.apps.MoviesConfig',
 ]
 
 MIDDLEWARE = [
